@@ -24,7 +24,7 @@
                 <h2>Search for a city</h2>
                 <input class="form-control" id="search-input" placeholder="Search for city">
                 <div class="d-grid gap-2">
-                    <button type="button" class="btn btn-primary">Search</button>
+                    <button type="button" class="btn btn-primary" id="search">Search</button>
                 </div>
                 <hr>
                 <div class="d-grid gap-2">
@@ -42,7 +42,7 @@
             <div class="col-md-9">
                 <div class="jumbotron jumbotron-fluid">
                     <div class="container">
-                        <h2 class="display-6">Atlanta (06/07/2021)</h2>
+                        <h2 class="display-6" id="city-name"></h2>
                         <!-- this are the metrics to jombotron -->
                         <p>Temperature:</p>
                         <p>Wind:</p>
@@ -102,7 +102,9 @@
 
         </div>
     </div>
-    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
+    <script src="script.js"></script>
 </body>
 
 </html>
