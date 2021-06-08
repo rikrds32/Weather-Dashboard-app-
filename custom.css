@@ -5,3 +5,7 @@
 input{
    margin-bottom: 1rem;
 }
+.jumbotron{
+    border: 1px solid black;
+    margin-top: 1rem;
+}
