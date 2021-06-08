@@ -5,10 +5,8 @@ var city=""
 // get weather function//
 function getWeather(city){
     var weatherUrl="api.openweathermap.org/data/2.5/weather?q="+city+"&appid="+apiKey;
-    $.ajax({
-        url:weatherUrl,
-        method:"GET"
-    }).then(function(res){
+    fetch(weatherUrl)
+    .then(function(res){
 
     })
 }
