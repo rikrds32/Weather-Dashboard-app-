@@ -1,0 +1,13 @@
+/* style for the header */
+header {
+    background:rgb(33, 33, 238);
+    text-align: center;
+    color:cornsilk;
+    padding: 1rem;
+    font-family: sans-serif;
+    
+}
+/* update marging for the input */
+input{
+    margin: 1rem;
+}

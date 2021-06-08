@@ -1,0 +1,7 @@
+/* ovewrite bootstrap defaults  */
+.container{
+    margin: 0;
+}
+input{
+   margin-bottom: 1rem;
+}
