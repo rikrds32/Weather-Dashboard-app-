@@ -1,11 +1,20 @@
 // weather api key//
+
 var apiKey="398dd4de7a0a8a9dafc9ebc7a298ca0b"
 
 // city var//
+
 var city=""
 var latitude=0
 var longitude=0
+
+//local storage//
+
+let searchHistory=JSON.parse(localStorage.getItem("search")) || [];
+console.log(searchHistory);
+
 // get weather function//
+
 function getWeather(city){
     var weatherUrl="https://api.openweathermap.org/data/2.5/weather?q="+city+"&units=imperial&appid="+apiKey;
     $.ajax({
@@ -29,8 +38,10 @@ function getUv(latitude,longitude){
     }).then(function(res){
         
         $("#uv-index").text("UV Index: "+res.current.uvi)
+        $("#uv-index").css("color", "#2ECC71");
     })
 }
+
 function getFiveDayForecast(city){
     var urlForecast="https://api.openweathermap.org/data/2.5/forecast?q="+city+"&units=imperial&appid="+apiKey;
     $.ajax({
@@ -66,4 +77,8 @@ $("#search").on("click",function(){
     city=$("#search-input").val();
     getWeather(city);
     getFiveDayForecast(city)
+})
+
+$("#city-name").on("click", function(){
+    localStorage.setItem("city", $("#city-name").val());
 })
